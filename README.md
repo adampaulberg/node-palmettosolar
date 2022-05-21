@@ -1,19 +1,16 @@
 # Usage
 
-```
+```javascript
 const api = require ('node-palmettosolar');
 
-async function test() {
-    let token = await api.authenticate('user@email.com', 'password');
 
-    let user = await api.user(token);
+let token = await api.authenticate('user@email.com', 'password');
 
-    let sitestatus = await api.siteStatus(token);
+let user = await api.user(token);
 
-    let energy = await api.energy(token, '2022-04-23', api.intervals.week, api.values.total);
+let sitestatus = await api.siteStatus(token);
 
-    let notifications = await api.notifications(token);
-}
+let energy = await api.energy(token, '2022-04-23', api.intervals.week, api.values.total);
 
-test()
+let notifications = await api.notifications(token);
 ```
